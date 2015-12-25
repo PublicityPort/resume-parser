@@ -47,15 +47,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sharpenter.ResumeParser.Model\Model.csproj">
+    <ProjectReference Include="..\Json\Json.csproj">
+      <Project>{f640b9c6-7d04-4da0-a620-4c8ec8a1eb57}</Project>
+      <Name>Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
       <Project>{48d5db4a-3c27-4b5e-8b42-4cda14aa8386}</Project>
       <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ResumeProcessor\ResumeProcessor.csproj">
+      <Project>{4e7ad443-8f56-4aa1-9476-664e35cef55c}</Project>
+      <Name>ResumeProcessor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y /R "$(TargetPath)" "$(SolutionDir)Sharpenter.ResumeParser.UI.Console\bin\$(ConfigurationName)\InputReaders"
-xcopy /Y /R "$(TargetDir)Sharpenter.ResumeParser.InputReader.Doc.pdb" "$(SolutionDir)Sharpenter.ResumeParser.UI.Console\bin\$(ConfigurationName)\InputReaders"</PostBuildEvent>
+    <PostBuildEvent>xcopy /Y /R "$(TargetPath)" "$(SolutionDir)UI.Console\bin\$(ConfigurationName)\InputReaders"
+xcopy /Y /R "$(TargetDir)InputReader.Doc.pdb" "$(SolutionDir)UI.Console\bin\$(ConfigurationName)\InputReaders"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

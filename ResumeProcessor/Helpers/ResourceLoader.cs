@@ -15,7 +15,7 @@ namespace ResumeProcessor.Helpers
         
         public IEnumerable<string> Load(Assembly assembly, string resourceName, char delimiter)
         {            
-            var fullResourcePath = string.Format("Sharpenter.ResumeParser.ResumeProcessor.Data.{0}", resourceName);
+            var fullResourcePath = string.Format("ResumeProcessor.Data.{0}", resourceName);
             using (var stream = assembly.GetManifestResourceStream(fullResourcePath))
             {
                 using (var reader = new StreamReader(stream))

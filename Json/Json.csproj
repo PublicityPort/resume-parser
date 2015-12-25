@@ -52,7 +52,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Sharpenter.ResumeParser.Model\Model.csproj">
+    <ProjectReference Include="..\Model\Model.csproj">
       <Project>{48d5db4a-3c27-4b5e-8b42-4cda14aa8386}</Project>
       <Name>Model</Name>
     </ProjectReference>
